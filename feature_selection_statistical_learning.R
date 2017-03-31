@@ -1,4 +1,3 @@
-#####perform machine learning algoritme for feature selection#############################
 #load the libraries
 library(DMwR)
 library(plyr)
@@ -8,7 +7,7 @@ library(ranger)
 library(doParallel)	
 
 #########################################################
-#### select here the data to analyze: A1C (only subjects with HbA1c measure) or diabetic_data (full dataset)
+#### select here dataset to analyze: A1C (only subjects with HbA1c measure) or diabetic_data (full dataset)
 
 d_data<-diabetic_data
 # fix class imbalance resampling from less represented class
