@@ -1,6 +1,6 @@
 
 #Read .csv of preprocessed clinical data and assign to 'diabetic data'
-diabetic_data<- read.csv(file="/home/acabbia/datasets/Diabetes_130_US_hospitals_99_08_dataset/OGO-compbio.csv",head=TRUE,sep=",")
+diabetic_data<- read.csv(file="Diabetes_130_US_hospitals_99_08_dataset.csv",head=TRUE,sep=",")
 
 
 #####turn diagnosis 1 into 'Musculoskeletal [disease]' or 'Other'###################################################
@@ -109,11 +109,5 @@ A1c <- filter(diabetic_data, A1Cresult != "None")
 # Clean up #
 rm(admission_types, admissiontype, feature, i, index, meds, out)
 
-###call feature selection script
-source('~/Desktop/feature-selection.R')
-
-
-# Script output: 
-#A1c : preprocessed df of all patients which have a HbA1c measure
-#diabetic_data : preprocessed df 
-
+###call feature selection script (uncomment next line)
+#source('~/feature-selection.R')
